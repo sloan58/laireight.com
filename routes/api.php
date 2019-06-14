@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/jitsiDialInNumbers', function() {
+    $response = [
+        'message' => 'Phone numbers available',
+        'numbers' => [
+            'US' => ['+1202509421']
+        ],
+        'numbersEnabled' => true
+    ];
+
+    return $response;
+});
