@@ -18,7 +18,7 @@ class AddCorsHeadersMiddleware
         $response = $next( $request );
         $response->header( 'Access-Control-Allow-Origin', '*' );
         $response->header( 'Access-Control-Allow-Headers', 'Origin, Content-Type' );
-        
+
         return $next($request);
     }
 }
